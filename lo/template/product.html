@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="product.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/product.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -24,12 +24,12 @@
         </div>
         <div class="bookdeta">
             <div class="bookpic">
-                <img src="{% static 'C:\Users\adarsh\Desktop\library\im\40097951.jpg' %}">
+
+                <img src="{{bo_de.b_image.url}}">
             </div>
             <div class="deta">
-                <h3>Wind of fire</h3>
-                <p>This function is similar to numpy.array except for the fact that it has fewer parameters. This routine is useful for converting Python sequence into ndarray.This function interprets a buffer as one-dimensional array. Any object that exposes
-                    the buffer interface is used as parameter to return an
+                <h3>{{bo_de.b_name}}</h3>
+                <p>{{bo_de.b_prev}}
                 </p>
             </div>
             <button>Avalable</button>
@@ -91,10 +91,10 @@
                 <h2>Comments</h2>
                 <div class="comm-ty">
                     <form action="">
-                        <input type="text" placeholder="UserName" class="usname"><br>
-                        <input type="email" placeholder="Eg: abc@gmail.com" class="emai"><br>
-                        <textarea class="com-body" placeholder="Type your comment here....."></textarea><br>
-                        <button>Submit</button>
+                        <input type="text" placeholder="UserName" class="usname" id="name" oninput="input()"><br>
+                        <input type="email" placeholder="Eg: abc@gmail.com" class="emai" id="ema" oninput="input()"><br>
+                        <textarea class="com-body" placeholder="Type your comment here....." id="com" oninput="input()"></textarea><br>
+                        <button id="but" disabled>Submit</button>
                     </form>
                 </div>
             </center>
@@ -124,6 +124,9 @@
             </div>
         </div>
     </div>
+    <script src="{% static 'js/button.js' %}">
+    </script>
+
 </body>
 
 </html>

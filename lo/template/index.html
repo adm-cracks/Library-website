@@ -78,49 +78,15 @@
 
             <div class="scrolling-wrapper">
                 <center>
-                    <div class="card">
-
-                        <img src="{% static 'im\40097951.jpg' %}">
-
-                        <p class="name">The slient patince</p>
-                        <p>alex michelle</p>
-
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'im\image.jpg' %}">
-                        <p class="name">Wind of fire </p>
-                        <p> snjswoikn k</p>
-                    </div>
+                    {% for i in book %}
+                    <a href="product?id={{i.id}}">
+                        <div class="card">
+                            <img src="{{i.b_image.url}}">
+                            <p class="name">{{i.b_name}}</p>
+                            <p> {{i.b_author}}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
                 </center>
             </div>
         </div>
