@@ -354,3 +354,19 @@ button {
 .fa-whatsapp {
     color: rgb(0, 0, 0);
 }
+
+
+/* serach fail */
+
+.not {
+    border: 3px black solid;
+    border-radius: 35px;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(60deg, #ceced3 0%, #0a9705 100%);
+}
+
+.not h3 {
+    color: rgba(255, 0, 0, 0.699);
+    margin-top: 70px;
+}

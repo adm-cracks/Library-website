@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/lib.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -66,8 +66,15 @@
             <div class="content flex">
 
                 <div id="maine">
-                    <span id="maine2"><input id ="input" type ="text" placeholder = "Search"> 
-                    <i id ="search " class="fa fa-search"></i></span></div>
+                    <!--<span id="maine2"><input id ="input" type ="text" placeholder = "Search"> 
+                    <i id ="search " class="fa fa-search"></i></span></div>-->
+                    <center>
+                        <form action="{% url 'sear_book' %}" method="post">
+                            {% csrf_token %}
+                            <span id="maine2"><input id ="input" type ="text" name="serbk" placeholder = "Search"> 
+                            </span></form>
+                </div>
+                </center>
             </div>
         </div>
         <!--Header ends-->
@@ -112,13 +119,25 @@
                     <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
                     <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
                     <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
-                    <p>Copyright © 2022 All Rights<br> Reserved By Bookozone</p>
+                    <p>Copyright © 2022 All Rights<br> Reserved By LiberOzone</p>
                 </div>
             </div>
         </footer>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
     <!--Content ends-->
+    <script>
+        $(function() {
+            $("#input").autocomplete({
+                source: "{% url 'ser' %}"
+
+            });
+        });
+    </script>
+
 </body>
 
 </html>

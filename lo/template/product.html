@@ -15,14 +15,16 @@
 <body>
     <div class="main">
         <div class="nabar">
-            <h4><label>M</label>Bookozone</h4>
+            <h4><label>M</label>LiberOzone</h4>
             <div class="men">
                 <a href="">About</a>
-                <a href="lib.html">Home</a>
+                <a href="{% url 'homepage' %}">Home</a>
                 <a href="#search">Contact</a>
             </div>
         </div>
+        {% if bo_de %}
         <div class="bookdeta">
+
             <div class="bookpic">
 
                 <img src="{{bo_de.b_image.url}}">
@@ -38,91 +40,64 @@
             <center>
                 <h2>Reviews</h2>
                 <div class="comm-box">
+                    {% if not bo_de.comments.all %}
+                    <h2 style="margin-top: 120px;color:blue;">No Reviews</h2>
+                    {% else %} {% for i in bo_de.comments.all %}
                     <div class="sli">
-                        <h4>adm500</h4>
+                        <h4>{{i.u_name}}</h4>
                         <hr>
-                        <p>great good book</p>
+                        <p>{{i.com_area}}</p>
                         <hr class="hr1">
-                        <p class="date">12-11-2022</p>
+                        <p class="date">{{i.date}}</p>
                     </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
-                    <div class="sli">
-                        <h4>adm500</h4>
-                        <hr>
-                        <p>great good book</p>
-                        <hr class="hr1">
-                        <p class="date">12-11-2022</p>
-                    </div>
+                    {% endfor %} {% endif %}
                 </div>
                 <h2>Comments</h2>
                 <div class="comm-ty">
-                    <form action="">
-                        <input type="text" placeholder="UserName" class="usname" id="name" oninput="input()"><br>
-                        <input type="email" placeholder="Eg: abc@gmail.com" class="emai" id="ema" oninput="input()"><br>
-                        <textarea class="com-body" placeholder="Type your comment here....." id="com" oninput="input()"></textarea><br>
+                    <form action="{% url 'comment' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="UserName" class="usname" id="names" name="uname" oninput="input()"><br>
+                        <input type="email" placeholder="Eg: abc@gmail.com" class="emai" id="ema" name="uemai" oninput="input()"><br>
+                        <textarea class="com-body" placeholder="Type your comment here....." id="com" name="comt" oninput="input()"></textarea><br>
+                        <input type="hidden" value="{{bo_de.id}}" name="bid">
                         <button id="but" disabled>Submit</button>
                     </form>
                 </div>
             </center>
+        </div> {% else %}
+        <div class="not">
+            <center>
+                <h3>Search item is not Available</h3>
+                <p>Please check the correct book name</p>
+                <p>Try again correct spelling</p>
+            </center>
         </div>
-        <div class="condact">
-            <div class="time">
-                <h3>Working Time</h3>
-                <p>Monday to friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.30 AM to 7.30PM</p>
-                <hr>
-                <p>Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30 AM to 1.30PM</p>
-                <hr>
-                <p>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closed</p>
+        {% endif %}
+    </div>
+    <div class="condact">
+        <div class="time">
+            <h3>Working Time</h3>
+            <p>Monday to friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.30 AM to 7.30PM</p>
+            <hr>
+            <p>Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30 AM to 1.30PM</p>
+            <hr>
+            <p>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closed</p>
 
-            </div>
-            <div class="con">
-                <h3>Address Line</h3>
-                <p>3rd Floor, Management Building,<br>Vidyavihar Campus, Vidyavihar<br> Mumbai,Maharashtra 421201<br>LandLine : 07232,091-2141<br> Mobile : 7215483612</p>
-            </div>
-            <div class="soci-media">
-                <h3>Socials</h3>
-                <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
-                <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
-                <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
-                <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
-                <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
-                <p>Copyright © 2022 All Rights<br> Reserved By Bookozone</p>
-            </div>
         </div>
+        <div class="con">
+            <h3>Address Line</h3>
+            <p>3rd Floor, Management Building,<br>Vidyavihar Campus, Vidyavihar<br> Mumbai,Maharashtra 421201<br>LandLine : 07232,091-2141<br> Mobile : 7215483612</p>
+        </div>
+        <div class="soci-media">
+            <h3>Socials</h3>
+            <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
+            <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
+            <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
+            <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
+            <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
+            <p>Copyright © 2022 All Rights<br> Reserved By LiberOzone</p>
+        </div>
+    </div>
     </div>
     <script src="{% static 'js/button.js' %}">
     </script>
