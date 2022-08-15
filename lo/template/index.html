@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/lib.css' %}">
+    <title>Liber Ozone</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/lib2.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
@@ -15,53 +15,14 @@
 <body>
     <div class="main">
         <div class="main2">
-            <h2></h2>
+
         </div>
 
         <div class="header">
-            <div class="men"><a href="">About</a>
+            <div class="men"><a href="/">About</a>
                 <a href="#booksec">Books</a>
-                <a href="#search">Search</a>
                 <a href="#cond">Condact</a>
             </div>
-            <!--Content before waves-->
-            <div class="inner-header flex">
-                <!--Just the logo.. Don't mind this-->
-
-                <h1 class="g1">WELLCOME TO BOOK OCEAN</h1>
-
-            </div>
-            <div class="anima">
-                <h1 class="mt-auto mb-2" id="anihead">
-                    Read
-                    <div class="animated-info">
-                        <span class="animated-item">The Books</span>
-                        <span class="animated-item">Knowledge</span>
-                        <span class="animated-item">The World</span>
-                    </div>
-                </h1>
-            </div>
-            <!--Waves Container-->
-            <div>
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="#ceced3" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="#0a9705" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="#ceced3" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#0a9705" />
-        <!--<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />-->
-        
-        </g>
-        </svg>
-
-            </div>
-            <!--Waves end-->
             <!--search-->
             <div class="content flex">
 
@@ -76,6 +37,46 @@
                 </div>
                 </center>
             </div>
+            <!--Content before waves-->
+            <div class="inner-header flex">
+                <!--Just the logo.. Don't mind this-->
+
+                <h1 class="g1">LIBER OCEAN</h1>
+
+            </div>
+            <div class="anima">
+                <h1 class="mt-auto mb-2" id="anihead">
+                    Read
+                    <div class="animated-info">
+                        <span class="animated-item">The Books</span>
+                        <span class="animated-item">Knowledge</span>
+                        <span class="animated-item">The World</span>
+                    </div>
+                </h1>
+                <p>A book is like a<br>garden carried in<br>the pocket</p>
+            </div>
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <!--<use xlink:href="#gentle-wave" x="48" y="0" fill="#ceced3" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="#0a9705" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="#ceced3" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#0a9705" />-->
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#0731eb6c" />
+        
+        </g>
+        </svg>
+
+            </div>
+            <!--Waves end-->
+
         </div>
         <!--Header ends-->
 
@@ -94,6 +95,7 @@
                         </div>
                     </a>
                     {% endfor %}
+
                 </center>
             </div>
         </div>
