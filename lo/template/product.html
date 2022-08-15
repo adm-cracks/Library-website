@@ -8,19 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liber Ozone Books</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/product.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/product2.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="main" style="background-image: url('/static/im/b5.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+    <div class="main">
         <div class="nabar">
-            <h4><label>M</label>LiberOzone</h4>
-            <div class="men">
-                <a href="">About</a>
-                <a href="{% url 'homepage' %}">Home</a>
-                <a href="#search">Contact</a>
-            </div>
+            <p><label>M</label>LiberOzone
+                <p>
+                    <div class="men">
+                        <a href="">About</a>
+                        <a href="{% url 'homepage' %}">Home</a>
+                        <a href="#search">Contact</a>
+                    </div>
         </div>
         {% if bo_de %}
         <div class="bookdeta" style="background-color:  transparent;">
@@ -28,6 +29,7 @@
             <div class="bookpic">
 
                 <img src="{{bo_de.b_image.url}}">
+
             </div>
             <div class="deta">
                 <h3>{{bo_de.b_name}}</h3>
@@ -73,31 +75,31 @@
             </center>
         </div>
         {% endif %}
-    </div>
-    <div class="condact">
-        <div class="time">
-            <h3>Working Time</h3>
-            <p>Monday to friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.30 AM to 7.30PM</p>
-            <hr>
-            <p>Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30 AM to 1.30PM</p>
-            <hr>
-            <p>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closed</p>
 
+        <div class="condact" style="background-color:  transparent;">
+            <div class="time">
+                <h3>Working Time</h3>
+                <p>Monday to friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.30 AM to 7.30PM</p>
+                <hr>
+                <p>Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30 AM to 1.30PM</p>
+                <hr>
+                <p>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closed</p>
+
+            </div>
+            <div class="con">
+                <h3>Address Line</h3>
+                <p>3rd Floor, Management Building,<br>Vidyavihar Campus, Vidyavihar<br> Mumbai,Maharashtra 421201<br>LandLine : 07232,091-2141<br> Mobile : 7215483612</p>
+            </div>
+            <div class="soci-media">
+                <h3>Socials</h3>
+                <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
+                <p>Copyright © 2022 All Rights<br> Reserved By LiberOzone</p>
+            </div>
         </div>
-        <div class="con">
-            <h3>Address Line</h3>
-            <p>3rd Floor, Management Building,<br>Vidyavihar Campus, Vidyavihar<br> Mumbai,Maharashtra 421201<br>LandLine : 07232,091-2141<br> Mobile : 7215483612</p>
-        </div>
-        <div class="soci-media">
-            <h3>Socials</h3>
-            <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
-            <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
-            <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
-            <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
-            <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
-            <p>Copyright © 2022 All Rights<br> Reserved By LiberOzone</p>
-        </div>
-    </div>
     </div>
     <script src="{% static 'js/button.js' %}">
     </script>

@@ -12,7 +12,7 @@
 }
 
 .main2 {
-    background: linear-gradient(60deg, #ceced380 0%, #2d51f06c 100%);
+    background-color: transparent;
 }
 
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
