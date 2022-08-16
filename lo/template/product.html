@@ -15,7 +15,7 @@
 <body>
     <div class="main">
         <div class="nabar">
-            <p><label>M</label>LiberOzone
+            <p>LiberOzone
                 <p>
                     <div class="men">
                         <a href="">About</a>
@@ -24,6 +24,7 @@
                     </div>
         </div>
         {% if bo_de %}
+        <!-- product -->
         <div class="bookdeta" style="background-color:  transparent;">
 
             <div class="bookpic">
@@ -38,12 +39,13 @@
             </div>
             <button>Avalable</button>
         </div>
+        <!--comment view-->
         <div class="comm">
             <center>
                 <h2>Reviews</h2>
                 <div class="comm-box">
                     {% if not bo_de.comments.all %}
-                    <h2 style="margin-top: 120px;color:blue;">No Reviews</h2>
+                    <h2 style="margin-top: 120px;color:white;">No Reviews</h2>
                     {% else %} {% for i in bo_de.comments.all %}
                     <div class="sli">
                         <h4>{{i.u_name}}</h4>
@@ -55,6 +57,7 @@
                     {% endfor %} {% endif %}
                 </div>
                 <h2>Comments</h2>
+                <!--comment type -->
                 <div class="comm-ty">
                     <form action="{% url 'comment' %}" method="post">
                         {% csrf_token %}
@@ -101,7 +104,7 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'js/button.js' %}">
+    <script type="text/javascript" src="{% static 'js/button.js' %}">
     </script>
 
 </body>

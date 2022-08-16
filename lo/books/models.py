@@ -11,6 +11,9 @@ class book_list(models.Model):
     b_prev = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     
+    class Meta():
+         ordering = ("b_name",)
+        
     def __str__(self):
         return self.b_name
     
@@ -20,4 +23,7 @@ class book_comment(models.Model):
     emi = models.CharField(max_length=100)
     com_area =  models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    
+    class Meta():
+        ordering = ("-date",)
   

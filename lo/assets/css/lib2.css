@@ -12,7 +12,7 @@
 }
 
 .main2 {
-    background: linear-gradient(60deg, #ceced380 0%, #2d51f06c 100%);
+    background-color: transparent;
 }
 
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
@@ -58,14 +58,6 @@ p {
     color: white;
     background-color: rgba(37, 201, 201, 0);
     height: 640px;
-}
-
-.logo {
-    width: 50px;
-    fill: white;
-    padding-right: 15px;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .inner-header {

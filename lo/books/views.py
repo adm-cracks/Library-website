@@ -16,7 +16,7 @@ def bookdeta(request):
 def serbook(request):
     
     se_el = request.POST['serbk']
-    print('search',se_el)
+   
     #book_deta = book_list.objects.get(Q(b_name__istartswith=se_el))
    
     if book_list.objects.filter(b_name=se_el):
@@ -35,11 +35,9 @@ def bookcomment(request):
     b_com = request.POST['comt']
     u_email = request.POST['uemai']
     b_id = request.POST['bid']
-   
     dx = book_comment.objects.filter(product_id=b_id)
-    print(dx)
-    ali=[]
    
+    ali=[]
     for i in dx:
         ali.append(i.emi)
    

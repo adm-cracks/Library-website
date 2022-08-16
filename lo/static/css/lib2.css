@@ -60,14 +60,6 @@ p {
     height: 640px;
 }
 
-.logo {
-    width: 50px;
-    fill: white;
-    padding-right: 15px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .inner-header {
     height: 150px;
     width: 800px;

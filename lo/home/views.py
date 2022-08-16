@@ -15,7 +15,7 @@ def index(request):
 def serach(request):
     if 'term' in request.GET:
         s_e = request.GET['term']
-        print(s_e)
+       
         ob_s=book_list.objects.filter(Q(b_name__istartswith=s_e))
         ali=[]
         for i in ob_s:

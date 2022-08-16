@@ -3,11 +3,13 @@ function input() {
     var em = document.getElementById('ema').value;
     var com = document.getElementById('com').value;
 
+
+
     if (nam != '' && em != '' && com != '') {
         document.getElementById("but").disabled = false;
-        b.style.backgroundColor = "blue";
+        b.style.backgroundColor = "red";
         b.style.cursor = "pointer"
-        alert("done")
+        alert("done");
 
 
     } else {

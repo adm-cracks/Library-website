@@ -5,8 +5,14 @@ function input() {
 
     if (nam != '' && em != '' && com != '') {
         document.getElementById("but").disabled = false;
+        b.style.backgroundColor = "blue";
+        b.style.cursor = "pointer"
+        alert("done")
+
 
     } else {
         document.getElementById("but").disabled = true;
+        b.style.backgroundColor = "rgba(245, 245, 245, 0.397)";
+
     }
 }

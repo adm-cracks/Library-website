@@ -38,6 +38,9 @@
     color: white;
 }
 
+
+/*menu*/
+
 .men {
     margin-top: 13px;
     margin-left: 680px;
@@ -342,7 +345,8 @@ button {
     text-decoration: none;
 }
 
-.fa-facebook {}
+
+/*.fa-facebook {}
 
 .fa-twitter {}
 
@@ -350,7 +354,7 @@ button {
 
 .fa-instagram {}
 
-.fa-whatsapp {}
+.fa-whatsapp {}*/
 
 
 /* serach fail */
